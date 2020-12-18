@@ -73,6 +73,7 @@ import com.android.launcher3.graphics.DragPreviewProvider;
 import com.android.launcher3.graphics.PreloadIconDrawable;
 import com.android.launcher3.menu.controller.MenuEffectController;
 import com.android.launcher3.menu.bean.MenuItem;
+import com.android.launcher3.pageindicators.PageIndicatorDots;
 import com.android.launcher3.pageindicators.WorkspacePageIndicator;
 import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.setting.MxSettings;
@@ -112,7 +113,8 @@ import static com.android.launcher3.dragndrop.DragLayer.ALPHA_INDEX_OVERLAY;
  * Each page contains a number of icons, folders or widgets the user can
  * interact with. A workspace is meant to be used with a fixed width only.
  */
-public class Workspace extends CircularSlidePagedView<WorkspacePageIndicator>
+//  public class Workspace extends CircularSlidePagedView<WorkspacePageIndicator>
+public class Workspace extends CircularSlidePagedView<PageIndicatorDots>
         implements DropTarget, DragSource, View.OnTouchListener,
         DragController.DragListener, Insettable, LauncherStateManager.StateHandler {
     private static final String TAG = "Launcher.Workspace";
@@ -515,18 +517,18 @@ public class Workspace extends CircularSlidePagedView<WorkspacePageIndicator>
         // Add the first page
         CellLayout firstPage = insertNewWorkspaceScreen(Workspace.FIRST_SCREEN_ID, 0);
         // Always add a QSB on the first screen.
-        if (qsb == null) {
-            // In transposed layout, we add the QSB in the Grid. As workspace does not touch the
-            // edges, we do not need a full width QSB.
-            qsb = LayoutInflater.from(getContext())
-                    .inflate(R.layout.search_container_workspace, firstPage, false);
-        }
-
-        CellLayout.LayoutParams lp = new CellLayout.LayoutParams(0, 0, firstPage.getCountX(), 1);
-        lp.canReorder = false;
-        if (!firstPage.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true)) {
-            Log.e(TAG, "Failed to add to item at (0, 0) to CellLayout");
-        }
+//        if (qsb == null) {
+//            // In transposed layout, we add the QSB in the Grid. As workspace does not touch the
+//            // edges, we do not need a full width QSB.
+//            qsb = LayoutInflater.from(getContext())
+//                    .inflate(R.layout.search_container_workspace, firstPage, false);
+//        }
+//
+//        CellLayout.LayoutParams lp = new CellLayout.LayoutParams(0, 0, firstPage.getCountX(), 1);
+//        lp.canReorder = false;
+//        if (!firstPage.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true)) {
+//            Log.e(TAG, "Failed to add to item at (0, 0) to CellLayout");
+//        }
     }
 
     public void removeAllWorkspaceScreens() {
