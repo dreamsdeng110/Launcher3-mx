@@ -11,9 +11,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.android.mxlibrary.util.XLog;
-import com.codemx.effectivecard.launcherclient.ILauncherOverlayCallback;
-import com.codemx.effectivecard.launcherclient.MxLayoutParams;
-import com.codemx.effectivecard.launcherclient.MxMessage;
+
+
 import com.codemx.floatwindow.FloatWindow;
 
 /**

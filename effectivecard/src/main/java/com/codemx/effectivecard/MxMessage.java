@@ -1,4 +1,4 @@
-package com.codemx.effectivecard.launcherclient;
+package com.codemx.effectivecard;
 
 import android.os.Parcel;
 import android.os.Parcelable;

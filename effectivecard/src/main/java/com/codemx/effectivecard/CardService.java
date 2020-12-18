@@ -6,10 +6,9 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import com.android.mxlibrary.util.XLog;
-import com.codemx.effectivecard.launcherclient.ILauncherOverlay;
-import com.codemx.effectivecard.launcherclient.ILauncherOverlayCallback;
-import com.codemx.effectivecard.launcherclient.MxLayoutParams;
-import com.codemx.effectivecard.launcherclient.MxMessage;
+
+
+
 
 import java.lang.ref.WeakReference;
 
@@ -88,13 +87,18 @@ public class CardService extends Service {
         }
 
         @Override
-        public void windowAttached(MxLayoutParams layoutParams, ILauncherOverlayCallback overlayCallback, int flags) throws RemoteException {
-            XLog.d(XLog.getTag(), "windowAttached " + layoutParams);
-            IWindowCallback callback = mWeakReference.get();
-            if (callback != null) {
-                callback.windowAttached(layoutParams, overlayCallback, flags);
-            }
+        public void windowAttached(com.codemx.effectivecard.MxLayoutParams layoutParams, ILauncherOverlayCallback overlayCallback, int flags) throws RemoteException {
+
         }
+
+//        @Override
+//        public void windowAttached(MxLayoutParams layoutParams, ILauncherOverlayCallback overlayCallback, int flags) throws RemoteException {
+//            XLog.d(XLog.getTag(), "windowAttached " + layoutParams);
+//            IWindowCallback callback = mWeakReference.get();
+//            if (callback != null) {
+//                callback.windowAttached(layoutParams, overlayCallback, flags);
+//            }
+//        }
 
         @Override
         public void windowDetached(boolean isChangingConfigurations) throws RemoteException {
@@ -140,6 +144,8 @@ public class CardService extends Service {
                 callback.onPause();
             }
         }
+
+
 
         @Override
         public void onTransact(MxMessage msg) throws RemoteException {

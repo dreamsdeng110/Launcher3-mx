@@ -1,8 +1,6 @@
 package com.codemx.effectivecard;
 
-import com.codemx.effectivecard.launcherclient.ILauncherOverlayCallback;
-import com.codemx.effectivecard.launcherclient.MxLayoutParams;
-import com.codemx.effectivecard.launcherclient.MxMessage;
+
 
 /**
  * Created by yuchuan

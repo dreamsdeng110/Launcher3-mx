@@ -14,6 +14,8 @@ import android.view.WindowManager.LayoutParams;
 
 import com.android.mxlibrary.util.XLog;
 import com.codemx.effectivecard.CardService;
+import com.codemx.effectivecard.ILauncherOverlay;
+import com.codemx.effectivecard.MxLayoutParams;
 
 public class LauncherClient {
     private static final boolean HIDE_WINDOW_WHEN_OVERLAY_OPEN = false;
